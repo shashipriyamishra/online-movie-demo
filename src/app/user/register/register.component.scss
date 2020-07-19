@@ -1,0 +1,37 @@
+mat-card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: #e6e3e3;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  mat-card-title{
+      margin-left: 0;
+  }
+  .mat-card-header-text{
+    margin-left: 0 !important;
+  }
+  .login-container{
+      padding: 30px;
+      min-height: 400px;
+      background: url('../../../assets/images/bg.jpg') no-repeat; 
+      background-size: cover;
+      .example-section{
+          display: flex;
+          justify-content: flex-start;
+      }
+      .example-margin{
+          margin-right: 15px;
+      }
+      .type-user{
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: row;
+      }
+  }

@@ -1,0 +1,30 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background:#e6e3e3;
+  }
+  mat-card-header{
+      justify-content: center;
+  }
+  form{
+      padding: 10px 30px;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  .login-container{
+      min-height: 400px;
+      padding: 30px;
+
+      background: url('../../../assets/images/bg.jpg') no-repeat;
+      background-size: cover;
+  }
+  .signup{
+      color: #000;
+      font-weight: 500;
+  }

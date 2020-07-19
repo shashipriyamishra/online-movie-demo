@@ -1,0 +1,46 @@
+<section class="login-container">
+    <mat-card class="example-card ">
+       <mat-card-header>
+         <mat-card-title>Register</mat-card-title>
+       </mat-card-header>
+       <mat-card-content>
+         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"  class="example-form">
+           
+                 <mat-form-field class="example-full-width">
+                 <input matInput placeholder="Username"  formControlName="userName" required>
+                 <span class="error" *ngIf="isSubmitted && formControls.userName.errors"> Username is required</span>
+                 </mat-form-field>
+                 <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email"  formControlName="userEmail" required>
+                    <span class="error" *ngIf="isSubmitted && formControls.userEmail.errors"> Email is required</span>
+                    </mat-form-field>
+               <mat-form-field class="example-full-width">
+               <input matInput placeholder="Password"  type="password" formControlName="userPassword" required>
+               <span class="error" *ngIf="isSubmitted && formControls.userPassword.errors"> Password is required</span>
+               <!-- <span class="error" *ngIf="isSubmitted && formControls.userPassword.errors.minlength"> Password must be at least 6 characters</span> -->
+               
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+                <input matInput (blur)="onBlurPassword()" placeholder="Confirm Password"  type="password" formControlName="confirmPassword" required>
+                <span class="error" *ngIf="isSubmitted && formControls.confirmPassword.errors"> confirm password is required</span>
+                <p class="error" *ngIf="passwordNotmatched">password does not match</p>
+              </mat-form-field>
+              <!-- <mat-form-field class="example-full-width">
+                <mat-checkbox name="type" class="example-margin">trial</mat-checkbox>
+                <mat-checkbox name="type" class="example-margin" >Paid</mat-checkbox>
+              </mat-form-field> -->
+              <section class="type-user">
+              <mat-radio-group aria-label="Select an option" formControlName="userAccountType">
+                <mat-radio-button  class="example-margin" value="trial">Trial</mat-radio-button>
+                <mat-radio-button value="paid">Paid</mat-radio-button>
+              </mat-radio-group>
+            </section>
+              <mat-card-actions>
+                <button mat-raised-button type="submit"  color="primary">Register</button>
+              </mat-card-actions>
+         </form>
+         <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+       </mat-card-content>
+       
+     </mat-card>
+    </section>
